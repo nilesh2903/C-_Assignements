@@ -26,29 +26,50 @@ int main()
 
     // Peform Switch Case based on the calculated percetange
     int precent;
-    switch(percent){
+    //Switch case defination
+    int i;
+    if (percent>=90){
+        i=1;
+    }
+    else if(percent>=80){
+        i=2;
+    }
+    else if(percent>=70){
+        i=3;
+    }
+    else if(percent>=60){
+        i=4;
+    }
+    else if(percent>=40){
+        i=5;
+    }
+    else{
+        i=6;
+    }
+
+    switch(i){
         case 1:
         cout << "Grade A";
         break;
         
         case 2:
-        cout << "Grade A";
+        cout << "Grade B";
         break;
         
         case 3:
-        cout << "Grade A";
+        cout << "Grade C";
         break;
         
         case 4:
-        cout << "Grade A";
+        cout << "Grade D";
         break;
         
         case 5:
-        cout << "Grade A";
+        cout << "Grade E";
         break;
         
         case 6:
-        cout << "Grade A";
+        cout << "Grade F";
         break;
     }
     return 0;

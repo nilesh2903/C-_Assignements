@@ -1,17 +1,20 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-
+int chance, i;
 
 // Function for the guessing game logic
-void guessgame()
+/*void guessgame()
 {
-    int i, chance, guess;
+    
     for (i=1; i<=chance; i++)
     {
         int guess, Random;
+        cout << "game Started" << endl;
         cout << "Enter the guess:" << endl;
+        cout << Random;
         cin >> guess;
+        cout << guess << "&"<< Random ;
         if (guess == Random){
             cout << "Won Correct Guess:";
         
@@ -20,13 +23,10 @@ void guessgame()
             cout << "Try entering Larger Value:";
 
         }
-        else 
-        {
-            cout << "Try Enterting Smaller Value:";
-
-        }
+        
+        
     } 
-}
+}*/
 
 
 
@@ -38,35 +38,87 @@ int main()
     int N = 100 ;
     int Random = rand() % N ;
     cout << Random << endl;
-        
+    char c;
     // Let the user choose level of difficulty
     cout << "Choose the Level of Difficulty:";
-    char c;
     cin >> c;
-    int chance,i;
     
     if (c=='E'){
-        int chance = 10;
+        chance = 10;
+        int guess;
         cout << "Easy Difficulty is Selected:"<< endl;
         cout << endl;
         cout << "You will get guesses " << chance << " to do the correct guess." << endl; 
-        guessgame();
+        for (int i=1; i<=chance; i++)
+        {
+        cout << "game Started" << endl;
+        cout << "Enter the guess:" << endl;
+        cin >> guess;
+        cout << guess << "&"<< Random ;
+        if (guess == Random){
+            cout << "Won Correct Guess:";
+        }
+        else if (guess < Random ){
+            cout << "Try entering Larger Value:";
+        }
+        else {
+            cout << "Try Entering Smaller Valur:";
+        }
+        } 
+        
+cout << "You Have Lost the Game:"<< endl;
 
     }
     else if (c== 'M'){
-        int chance = 5;
+        chance = 5;
         cout << "Medium Difficulty is Selected:"<< endl;
         cout << endl;
         cout << "You will get guesses " << chance << " to do the correct guess." << endl;
-        guessgame();
+    for (i=1; i<=chance; i++)
+    {
+        int guess, Random;
+        cout << "game Started" << endl;
+        cout << "Enter the guess:" << endl;
+        cout << Random;
+        cin >> guess;
+        cout << guess << "&"<< Random ;
+        if (guess == Random){
+            cout << "Won Correct Guess:";
+        
+        }
+        else if (guess < Random ){
+            cout << "Try entering Larger Value:";
+
+        }
+        
+        
+    } 
 
     }
     else {
-        int chance = 3;
+        chance = 3;
         cout << "Hard Difficulty is Selected:"<< endl;
         cout << endl;
         cout << "You will get guesses " << chance << " to do the correct guess." << endl;
-        guessgame();
+    for (i=1; i<=chance; i++)
+    {
+        int guess, Random;
+        cout << "game Started" << endl;
+        cout << "Enter the guess:" << endl;
+        cout << Random;
+        cin >> guess;
+        cout << guess << "&"<< Random ;
+        if (guess == Random){
+            cout << "Won Correct Guess:";
+        
+        }
+        else if (guess < Random ){
+            cout << "Try entering Larger Value:";
+
+        }
+        
+        
+    } 
     }
     
     return 0;
