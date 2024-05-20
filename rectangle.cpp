@@ -12,10 +12,22 @@ int main()
     for (i=1; i<=y; i++)
     {
         for (j=1; j<=x; j++){
-            cout<< "X";
+            if (i == 1 || i == y)
+            {
+                cout<< "X";
+            }
+            else if (j ==1 || j ==x )
+            {
+                cout<< "X";
+            }
+            else if (2<i<x-1 || 2<j<y-1)
+            {
+                cout << " ";
+            }
         }
         cout << endl;
     }
+    
     
 
 }

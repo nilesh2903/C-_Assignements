@@ -6,16 +6,28 @@ int main() {
     cout << "Type in the value year:" << endl;
     cin >> x ;
     // Logic of leap year
-    int z;
+    int z, m, n;
     z = x % y;
-    
-    if (z == 0){
-    cout << "This is a leap year"<<endl;
-    }
-    else
+    m =x % 100;
+    n =x % 400;
+  
+    if (m == 0)
     {
-    cout << "This is not leap year"<< endl;
+        if (n == 0)
+        {
+            cout << "This is a leap year";
+        }
+        else 
+        {
+            cout << "This is not a leap year";
+        }
     }
-
-    return 0;
+    else if (z == 0)
+    {
+        cout << "This is a leap year";
+    }
+    else 
+    {
+        cout << "This is not a leap year";
+    }
 }
