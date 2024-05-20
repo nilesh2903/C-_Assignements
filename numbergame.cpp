@@ -3,31 +3,6 @@
 using namespace std;
 int chance, i;
 
-// Function for the guessing game logic
-/*void guessgame()
-{
-    
-    for (i=1; i<=chance; i++)
-    {
-        int guess, Random;
-        cout << "game Started" << endl;
-        cout << "Enter the guess:" << endl;
-        cout << Random;
-        cin >> guess;
-        cout << guess << "&"<< Random ;
-        if (guess == Random){
-            cout << "Won Correct Guess:";
-        
-        }
-        else if (guess < Random ){
-            cout << "Try entering Larger Value:";
-
-        }
-        
-        
-    } 
-}*/
-
 
 
 
