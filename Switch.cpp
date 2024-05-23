@@ -1,77 +1,53 @@
-#include<iostream>
+
+#include <iostream>
+
 using namespace std;
-int percent,phy,chem,bio,math,comp;
 
-//function to calculate the percentage of the marks
-void percentage()
-{
-    percent = (phy+chem+bio+math+comp)/5;
-    cout << percent;
-}
+int main() {
+    int percentage;
 
-int main()
-{
-    // Take inpit Subject Marks from the User 
-    cout << "Enter the Markes of Pyhsics:";
-    cin >> phy ;
-    cout << "Enter the Markes of Chemistry:";
-    cin >> chem;
-    cout << "Enter the Markes of BBiology:";
-    cin >> bio;
-    cout << "Enter the Markes of Mathmatics:";
-    cin >> math;
-    cout << "Enter the Markes of Computer:";
-    cin >> comp;
-    percentage();
+    cout << "Enter the candidate's percentage (0-100): ";
+    cin >> percentage;
+  
 
-    // Peform Switch Case based on the calculated percetange
-    int precent;
-    //Switch case defination
-    int i;
-    if (percent>=90){
-        i=1;
-    }
-    else if(percent>=80){
-        i=2;
-    }
-    else if(percent>=70){
-        i=3;
-    }
-    else if(percent>=60){
-        i=4;
-    }
-    else if(percent>=40){
-        i=5;
-    }
-    else{
-        i=6;
+    if (percentage < 0 || percentage > 100) {
+        cout << "Invalid percentage. Please enter a value between 0 and 100." << endl;
+        return 1; // Indicate error (optional)
     }
 
-    switch(i){
-        case 1:
-        cout << "Grade A";
-        break;
-        
-        case 2:
-        cout << "Grade B";
-        break;
-        
-        case 3:
-        cout << "Grade C";
-        break;
-        
-        case 4:
-        cout << "Grade D";
-        break;
-        
-        case 5:
-        cout << "Grade E";
-        break;
-        
+    switch (percentage / 10) { // Efficient division to get the first digit (grade)
+        case 10:
+        case 9:
+            cout << "Grade: A+" << endl;
+            break;
+        case 8:
+            cout << "Grade: A" << endl;
+            break;
+        case 7:
+            cout << "Grade: B+" << endl;
+            break;
         case 6:
-        cout << "Grade F";
-        break;
+            cout << "Grade: B" << endl;
+            break;
+        case 5:
+            cout << "Grade: C+" << endl;
+            break;
+        case 4:
+            cout << "Grade: C" << endl;
+            break;
+        case 3:
+            cout << "Grade: D" << endl;
+            break;
+        case 2:
+            cout << "Grade: F" << endl;
+            break;
+        case 0:
+        case 1:
+            cout << "Grade: F" << endl;
+            break;
+        default:
+            cout << "Unexpected error: Invalid grade calculation." << endl;
     }
-    return 0;
 
+    return 0;
 }
